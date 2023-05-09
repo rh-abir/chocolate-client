@@ -5,6 +5,7 @@ import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AddChocolates from "./components/AddChocolates.jsx";
+import UpdateChocolate from "./components/UpdateChocolate.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path:'addchocolate',
     element:<AddChocolates></AddChocolates>
+  },
+  {
+    path: 'updatechocolate/:id',
+    element:<UpdateChocolate></UpdateChocolate>
   }
 ]);
 

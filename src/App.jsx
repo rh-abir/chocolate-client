@@ -17,6 +17,8 @@ function App() {
         Chocolate Management System
       </h1>
 
+      <button></button>
+
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
@@ -35,6 +37,8 @@ function App() {
               chocolates.map(chocolate => <ChocolatesTables
                key={chocolate._id}
                chocolate = {chocolate}
+               chocolates = {chocolates}
+               setChocolates = {setChocolates}
               ></ChocolatesTables>)
             }
 
