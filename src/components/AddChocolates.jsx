@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 const AddChocolates = () => {
   const handleAddChocolate = (event) => {
     event.preventDefault();
@@ -13,6 +15,26 @@ const AddChocolates = () => {
       photo,
       category,
     };
+
+    fetch("http://localhost:5000/chocolates", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updateChocolate),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Done!",
+            text: "updaloade Your chocolate",
+            icon: "success",
+            confirmButtonText: "Done !",
+          });
+        }
+      });
 
     console.log(updateChocolate);
   };
