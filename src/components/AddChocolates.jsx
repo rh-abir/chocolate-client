@@ -102,7 +102,7 @@ const AddChocolates = () => {
             </div>
             <input
               type="submit"
-              value="Update"
+              value="Add Chocolate"
               className="btn btn-block bg-[#91572B]"
             />
           </div>
